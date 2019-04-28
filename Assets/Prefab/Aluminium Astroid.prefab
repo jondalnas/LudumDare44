@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114487577452022544}
   - component: {fileID: 58597943874949724}
   - component: {fileID: 114286709101254192}
+  - component: {fileID: 58996929378759926}
   m_Layer: 0
   m_Name: Aluminium Astroid
   m_TagString: Astroid
@@ -66,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061721319011658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8424618, y: -0.66685337, z: 0}
+  m_LocalPosition: {x: 13.1, y: -25.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4593987795413318}
@@ -108,6 +109,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
+--- !u!58 &58996929378759926
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1061721319011658}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 10
 --- !u!114 &114286709101254192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resource: 4
   vainSize: 5
+  timeBetweenHumans: 60
   buildings: 
 --- !u!114 &114487577452022544
 MonoBehaviour:
@@ -133,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a437896d08e3f449a5f98031708d15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  massOfSpacecraft: 129700
 --- !u!212 &212969752458587324
 SpriteRenderer:
   m_ObjectHideFlags: 1

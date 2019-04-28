@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AstroidGravity : MonoBehaviour {
 	private float astroidMassGravConstant;
-	public float massOfSpacecraft = 129700f;
+	public static float massOfSpacecraft = 129700f;
 
 	public void Start() {
 		//Multiplies the mass of the astroid with the gravitational constant, based on the fomula
 		//F=G*(m_1*m_2)/d^2
 		//Where m_1, m_2 and G are constant, for faster calculations
-		astroidMassGravConstant = PlanetGravity.GRAVITATIONAL_CONSTANT * transform.GetComponent<Rigidbody2D>().mass * massOfSpacecraft * massOfSpacecraft;
+		astroidMassGravConstant = PlanetGravity.GRAVITATIONAL_CONSTANT * transform.GetChild(0).localScale.x * transform.GetChild(0).localScale.x * transform.GetChild(0).localScale.x / 10f * massOfSpacecraft * massOfSpacecraft;
 	}
 
 	public float calculateGravityForce(float distanceSqr) {

@@ -8,16 +8,18 @@ public class Resources : MonoBehaviour {
 
 	[HideInInspector]
 	public static int[] resources = new int[(int) ResourceTypes.length+1];
-	public static Recipe[] recipes = new Recipe[] { new Recipe(BuildingTypes.house, new ResourceTypes[] { ResourceTypes.rock, ResourceTypes.iron }, new int[] { 100, 20 }),
-													 new Recipe(BuildingTypes.drill, new ResourceTypes[] { ResourceTypes.iron }, new int[] { 200 }),
-													 new Recipe(BuildingTypes.rocketSilo, new ResourceTypes[] { ResourceTypes.iron, ResourceTypes.copper, ResourceTypes.rock }, new int[] { 500, 250, 1000 }),
-													 new Recipe(BuildingTypes.barrack, new ResourceTypes[] { ResourceTypes.rock, ResourceTypes.iron }, new int[] { 100, 40 }),
-													 new Recipe(BuildingTypes.researchFacility, new ResourceTypes[] { ResourceTypes.rock, ResourceTypes.iron, ResourceTypes.copper }, new int[] { 200, 40, 10 }),
-													 new Recipe(BuildingTypes.refinery, new ResourceTypes[] { ResourceTypes.iron, ResourceTypes.copper, ResourceTypes.aluminium }, new int[] { 500, 500, 75 }) };
+	public static Recipe[] recipes = new Recipe[] { new Recipe(BuildingTypes.house, new ResourceTypes[] { ResourceTypes.rock, ResourceTypes.iron, ResourceTypes.fuel }, new int[] { 100, 20, 5 }),
+													 new Recipe(BuildingTypes.drill, new ResourceTypes[] { ResourceTypes.iron, ResourceTypes.fuel  }, new int[] { 200, 25 }),
+													 new Recipe(BuildingTypes.rocketSilo, new ResourceTypes[] { ResourceTypes.iron, ResourceTypes.copper, ResourceTypes.rock, ResourceTypes.fuel  }, new int[] { 500, 250, 1000, 2000 }),
+													 new Recipe(BuildingTypes.barrack, new ResourceTypes[] { ResourceTypes.rock, ResourceTypes.iron, ResourceTypes.fuel  }, new int[] { 100, 40, 50 }),
+													 new Recipe(BuildingTypes.researchFacility, new ResourceTypes[] { ResourceTypes.rock, ResourceTypes.iron, ResourceTypes.copper, ResourceTypes.fuel  }, new int[] { 200, 40, 10, 500 }),
+													 new Recipe(BuildingTypes.refinery, new ResourceTypes[] { ResourceTypes.iron, ResourceTypes.copper, ResourceTypes.aluminium, ResourceTypes.fuel  }, new int[] { 500, 500, 75, 500 }) };
 
     void Start() {
+        resources[(int)ResourceTypes.rock] = 500;
         resources[(int)ResourceTypes.iron] = 1000;
         resources[(int)ResourceTypes.fuel] = 500;
+        resources[(int)ResourceTypes.copper] = 50;
     }
 
     void Update() {

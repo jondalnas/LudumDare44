@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1648038684529024
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,8 +40,8 @@ GameObject:
   - component: {fileID: 114461883841159412}
   - component: {fileID: 60213196001342458}
   m_Layer: 8
-  m_Name: Player 1
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,6 +55,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4978884504876698}
   - component: {fileID: 120680572670534438}
+  - component: {fileID: 111786392224469702}
+  - component: {fileID: 95095250552691968}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -69,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1648038684529024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.29, y: 2.11, z: 0}
+  m_LocalPosition: {x: -211.19, y: -108.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4978884504876698}
@@ -116,7 +118,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -151,6 +153,39 @@ PolygonCollider2D:
       - {x: 0.4, y: -0.5}
       - {x: 0, y: -0.25}
       - {x: -0.4, y: -0.5}
+--- !u!95 &95095250552691968
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757373163585840}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd27e1beee783434ab7885277d163a21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &111786392224469702
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757373163585840}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9958949c3cf29c54ea7c257a18b35bb5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9958949c3cf29c54ea7c257a18b35bb5, type: 2}
+  - {fileID: 7400000, guid: bd221a9994e09ca469c5022f2985a21a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114461883841159412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,7 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationSpeed: 10
-  thrustPosition: {fileID: 0}
   package: {fileID: 1132080000580216, guid: 33af84dcdaf71ea44ab27dc85fc4f8dd, type: 2}
   buildings:
   - {fileID: 1728121434248588, guid: c4817ef3ea837bb4cb635587a5311a7a, type: 2}
@@ -174,6 +208,7 @@ MonoBehaviour:
   - {fileID: 1257752356963838, guid: e33df97aa0a816d44bacb163718a950d, type: 2}
   - {fileID: 1247600373832216, guid: 6629ff15bf5a8f342a4b7849a97b37f0, type: 2}
   fuelBurningMultiplier: 2.5
+  radarArrow: {fileID: 1466481110883742, guid: 617763d1b58cb0743ae8609876d4dd6c, type: 2}
 --- !u!114 &114541956841981096
 MonoBehaviour:
   m_ObjectHideFlags: 1

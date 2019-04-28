@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Astroid
   - Menu
+  - Radar
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,13 @@ public class PackageController : MonoBehaviour {
 		GameObject buildingGameObject = (GameObject) Instantiate(building, points[0].point, Quaternion.identity, col.transform);
 
         buildingGameObject.transform.up = points[0].normal;
-        col.gameObject.GetComponent<AstroidHandler>().buildings.Add(buildingGameObject.GetComponent<BuildingHandler>().type);
+
+        BuildingTypes type = buildingGameObject.GetComponent<BuildingHandler>().type;
+        col.gameObject.GetComponent<AstroidHandler>().buildings.Add(type);
+        
+        if (type == BuildingTypes.rocketSilo) {
+            CameraController.focuses.Add(buildingGameObject.transform);
+        }
 
         Destroy(gameObject);
 	}
